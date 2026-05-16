@@ -1,6 +1,6 @@
 Here I have created two simple Powershell scripts to automate tasks. 
 
-The first one named "Backup.ps1" Copies files in my Documents and Pictures user folders and and move them to a network attached storage location. I also added the -File parameter here to only grab files and not any subfolders as there are some folders in these locations that I do not care to back up.
+The first one named "Backup.ps1" Copies files in my Documents and Pictures user folders and and move them to a network attached storage location. I also added the -File parameter here to only grab files and not any subfolders as there are some folders in these locations that I do not care to back up. The second script named "Clear Files.ps1" clears out my temp files and my downloads folder (Which I personally just don't like being filled with old things) and then clears the recycle bin.
 
 I then went in to the Windows Task Scheduler and created two basic tasks to open Powershell and run each of these commands on Sundays at 1:00 AM. 
 
