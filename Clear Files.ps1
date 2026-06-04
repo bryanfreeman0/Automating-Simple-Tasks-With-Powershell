@@ -1,4 +1,7 @@
-Get-ChildItem -Path "C:\Users\Bryan\Downloads" | Remove-Item -Recurse -Force
-Get-ChildItem -Path "C:\Users\Bryan\AppData\Local\Temp" | Remove-Item -Recurse -Force
-Get-ChildItem -Path "C:\Windows\Temp" | Remove-Item -Recurse -Force
-Clear-RecycleBin -Force
+Remove-Item "$env:TEMP\*"        -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item "$env:TMP\*"         -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item "C:\Windows\Temp\*"  -Recurse -Force -ErrorAction SilentlyContinue
+
+Remove-Item "$env:USERPROFILE\Downloads\*" -Recurse -Force -ErrorAction SilentlyContinue
+
+Clear-RecycleBin -Force -ErrorAction SilentlyContinue
